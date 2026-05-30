@@ -1,0 +1,62 @@
+# -----------------------------
+# OS / Editor noise
+# -----------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE metadata
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Keep VS Code settings optional; ignore by default for clean student repos.
+.vscode/
+
+# -----------------------------
+# Logs / temp
+# -----------------------------
+*.log
+*.tmp
+*.swp
+*.swo
+
+# -----------------------------
+# Secrets and local env
+# -----------------------------
+.env
+.env.*
+!.env.example
+
+# Android signing and local machine config
+**/key.properties
+**/*.jks
+**/*.keystore
+**/*.p12
+**/android/local.properties
+
+# -----------------------------
+# Flutter / Dart generated files
+# -----------------------------
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.pub/
+**/.pub-cache/
+**/build/
+**/coverage/
+**/doc/api/
+
+# Platform-specific ephemeral/generated output
+**/ios/Flutter/.last_build_id
+**/ios/Flutter/ephemeral/
+**/android/.gradle/
+**/android/captures/
+**/windows/flutter/ephemeral/
+**/linux/flutter/ephemeral/
+**/macos/Flutter/ephemeral/
+
+# Crash symbol/map artifacts
+app.*.symbols
+app.*.map.json
