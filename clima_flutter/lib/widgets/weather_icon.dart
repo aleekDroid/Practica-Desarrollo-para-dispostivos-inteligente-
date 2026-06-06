@@ -1,3 +1,6 @@
+// lib/widgets/weather_icon.dart
+import 'package:flutter/material.dart';
+
 class WeatherIcon extends StatelessWidget {
   final String condition; // "sunny", "rainy", etc
   WeatherIcon({required this.condition});
