@@ -2,11 +2,13 @@
 import 'package:flutter/material.dart';
 import '../models/weather.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_blue_plus/flutter_blue_plus.dart';
+import '../services/ble_service.dart';
 
-// Cambiamos StateNotifier por Notifier
 class WeatherNotifier extends Notifier<Weather?> {
 
-  // En lugar de usar super(null), inicializamos el estado de arranque con este método
+  final bleService = BLEService();
+
   @override
   Weather? build() {
     return null;
@@ -23,6 +25,13 @@ class WeatherNotifier extends Notifier<Weather?> {
     // Al asignar este nuevo objeto a la variable state,
     // Riverpod avisa automáticamente a la UI para que se actualice.
     state = newWeather;
+  }
+
+  // Método para conectar al wearable y leer datos.
+  Future<void> connectToWearable(BluetoothDevice device) async {
+    await bleService.connectAndRead(device);
+    
+    updateWeather('Ciudad Wearable', 26.0, 'despejado');
   }
 }
 
